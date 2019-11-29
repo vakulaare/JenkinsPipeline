@@ -11,7 +11,7 @@ pipeline{
                 steps{
                      echo 'This is Second stage of pipeline build'
                      input('Do You want to proceed')
-                     sh "mkdir /docker"
+                     sh "mkdir /home/ec2-user/docker"
                    }
 }
     }
