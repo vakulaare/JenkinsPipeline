@@ -2,13 +2,13 @@ pipeline{
     agent any
     stages{
           stage('Stage one'){
-              Steps{
+              steps{
                     echo 'This is first stage of pipeline build'
                }
 }
 
           stage('Stage Two'){
-                Steps{
+                steps{
                      echo 'This is Second stage of pipeline build'
                      input('Do You want to proceed')
                      sh "mkdir /docker"
