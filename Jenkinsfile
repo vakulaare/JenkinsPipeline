@@ -14,19 +14,5 @@ Pipeline{
                      sh "mkdir /docker"
                    }
 }
-
-          
-          stage('Stage Three'){
-                   Where{
-                                  Not{
-                                             Branch 'master'
-                            }
-                   }
-
-                    Steps{
-                                 Echo 'This is third stage of pipeline'
-                        }
-
- }
     }
  }         
