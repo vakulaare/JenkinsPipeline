@@ -1,32 +1,32 @@
 Pipeline{
     Agent any
     Stages{
-          stage(‘Stage one’){
+          stage('Stage one'){
               Steps{
-                    echo ‘ This is first stage of pipeline build’
+                    echo 'This is first stage of pipeline build'
                }
 }
 
-          stage(‘Stage Two’){
+          stage('Stage Two'){
                 Steps{
-                     echo ‘This is Second stage of pipeline build’
-                     input(‘ Do You want to proceed’)
-                     sh “mkdir /docker”
+                     echo 'This is Second stage of pipeline build'
+                     input('Do You want to proceed')
+                     sh "mkdir /docker"
                    }
 }
 
           
-          stage(‘Stage Three’){
+          stage('Stage Three'){
                    Where{
                                   Not{
-                                             Branch ‘master’
+                                             Branch 'master'
                             }
                    }
 
                     Steps{
-                                 Echo ‘This is third stage of pipeline’
+                                 Echo 'This is third stage of pipeline'
                         }
 
  }
- 
+    }
  }         
